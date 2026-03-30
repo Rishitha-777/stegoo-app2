@@ -4,7 +4,7 @@ import cv2
 from PIL import Image
 import uuid
 
-app = Flask(__name__)
+app = Flask(__name__,template_folder="templates")
 
 UPLOAD_FOLDER = "uploads"
 OUTPUT_FOLDER = "output"
