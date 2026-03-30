@@ -100,7 +100,7 @@ def decode_image(image_path):
 # 🌐 HOME
 @app.route("/")
 def index():
-    return "app is working"
+    return render_template("index.html")
 
 
 # 🔐 ENCODE
