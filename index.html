@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Secret Chat 🔐</title>
+
+<style>
+body {
+    background: linear-gradient(135deg,#667eea,#764ba2);
+    font-family: Arial;
+    color:white;
+}
+.container {
+    width:400px;
+    margin:100px auto;
+    background:white;
+    color:black;
+    padding:25px;
+    border-radius:15px;
+    text-align:center;
+}
+input,textarea {
+    width:90%;
+    padding:10px;
+    margin:10px;
+}
+button {
+    background:#667eea;
+    color:white;
+    padding:10px;
+    border:none;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h2>💬 Send Secret Message</h2>
+
+<form action="/encode" method="post" enctype="multipart/form-data">
+
+<textarea name="message" placeholder="Type message"></textarea>
+
+<input type="password" name="key" placeholder="Secret key 🔒">
+
+<input type="file" name="image" required>
+<input type="file" name="video" required>
+
+<button>Send 🔐</button>
+
+</form>
+
+</div>
+
+</body>
+</html>

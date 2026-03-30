@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Decode Message</title>
+
+<style>
+body {
+    background: #f1f1f1;
+    font-family: Arial;
+    text-align: center;
+}
+
+.container {
+    margin-top: 100px;
+}
+
+input {
+    padding: 10px;
+    width: 250px;
+}
+
+button {
+    padding: 10px;
+    background: green;
+    color: white;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h2>🔓 Enter Secret Key</h2>
+
+<form action="/decode" method="post" enctype="multipart/form-data">
+
+<input type="file" name="file" required><br><br>
+
+<input type="text" name="key" placeholder="Enter key"><br><br>
+
+<button>Unlock Message</button>
+
+</form>
+
+</div>
+
+</body>
+</html>
