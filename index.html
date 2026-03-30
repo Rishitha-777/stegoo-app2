@@ -1,55 +1,67 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Secret Chat 🔐</title>
+    <title>Stego Secure App</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            text-align: center;
+            padding-top: 80px;
+        }
 
-<style>
-body {
-    background: linear-gradient(135deg,#667eea,#764ba2);
-    font-family: Arial;
-    color:white;
-}
-.container {
-    width:400px;
-    margin:100px auto;
-    background:white;
-    color:black;
-    padding:25px;
-    border-radius:15px;
-    text-align:center;
-}
-input,textarea {
-    width:90%;
-    padding:10px;
-    margin:10px;
-}
-button {
-    background:#667eea;
-    color:white;
-    padding:10px;
-    border:none;
-}
-</style>
+        .box {
+            background: white;
+            color: black;
+            padding: 30px;
+            border-radius: 12px;
+            width: 350px;
+            margin: auto;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+
+        input, button {
+            margin: 10px;
+            padding: 10px;
+            width: 90%;
+            border-radius: 8px;
+            border: none;
+        }
+
+        button {
+            background: #667eea;
+            color: white;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #5a67d8;
+        }
+    </style>
 </head>
 
 <body>
 
-<div class="container">
+<h1>🔐 Stego Secure Messenger</h1>
 
-<h2>💬 Send Secret Message</h2>
+<div class="box">
+    <form action="/encode" method="post" enctype="multipart/form-data">
 
-<form action="/encode" method="post" enctype="multipart/form-data">
+        <input type="text" name="message" placeholder="Enter secret message" required>
 
-<textarea name="message" placeholder="Type message"></textarea>
+        <input type="password" name="key" placeholder="Enter secret key" required>
 
-<input type="password" name="key" placeholder="Secret key 🔒">
+        <input type="file" name="image" required>
 
-<input type="file" name="image" required>
-<input type="file" name="video" required>
+        <input type="file" name="video" required>
 
-<button>Send 🔐</button>
+        <button type="submit">Encode & Download</button>
+    </form>
 
-</form>
+    <br>
+
+    <a href="/decode">Go to Decode</a>
 
 </div>
 
