@@ -1,48 +1,56 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Decode Message</title>
+    <title>Decode Message</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: linear-gradient(135deg, #ff758c, #ff7eb3);
+            color: white;
+            text-align: center;
+            padding-top: 80px;
+        }
 
-<style>
-body {
-    background: #f1f1f1;
-    font-family: Arial;
-    text-align: center;
-}
+        .box {
+            background: white;
+            color: black;
+            padding: 30px;
+            border-radius: 12px;
+            width: 350px;
+            margin: auto;
+        }
 
-.container {
-    margin-top: 100px;
-}
+        input, button {
+            margin: 10px;
+            padding: 10px;
+            width: 90%;
+            border-radius: 8px;
+            border: none;
+        }
 
-input {
-    padding: 10px;
-    width: 250px;
-}
-
-button {
-    padding: 10px;
-    background: green;
-    color: white;
-}
-</style>
-
+        button {
+            background: #ff758c;
+            color: white;
+        }
+    </style>
 </head>
 
 <body>
 
-<div class="container">
+<h1>🔓 Decode Secret Message</h1>
 
-<h2>🔓 Enter Secret Key</h2>
+<div class="box">
+    <form action="/decode" method="post" enctype="multipart/form-data">
 
-<form action="/decode" method="post" enctype="multipart/form-data">
+        <input type="file" name="file" required>
 
-<input type="file" name="file" required><br><br>
+        <input type="password" name="key" placeholder="Enter secret key" required>
 
-<input type="text" name="key" placeholder="Enter key"><br><br>
+        <button type="submit">Decode</button>
+    </form>
 
-<button>Unlock Message</button>
-
-</form>
+    <br>
+    <a href="/">Back to Encode</a>
 
 </div>
 
