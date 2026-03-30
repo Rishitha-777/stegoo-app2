@@ -1,68 +1,47 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Stego Secure App</title>
-    <style>
-        body {
-            font-family: Arial;
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            color: white;
-            text-align: center;
-            padding-top: 80px;
-        }
-
-        .box {
-            background: white;
-            color: black;
-            padding: 30px;
-            border-radius: 12px;
-            width: 350px;
-            margin: auto;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-        }
-
-        input, button {
-            margin: 10px;
-            padding: 10px;
-            width: 90%;
-            border-radius: 8px;
-            border: none;
-        }
-
-        button {
-            background: #667eea;
-            color: white;
-            cursor: pointer;
-        }
-
-        button:hover {
-            background: #5a67d8;
-        }
-    </style>
+<title>Stego Premium</title>
+<style>
+body {
+    background: linear-gradient(135deg,#667eea,#764ba2);
+    font-family: Arial;
+    color:white;
+    text-align:center;
+    padding-top:80px;
+}
+.box {
+    background:white;
+    color:black;
+    padding:30px;
+    border-radius:12px;
+    width:320px;
+    margin:auto;
+}
+input,button {
+    width:90%;
+    padding:10px;
+    margin:10px;
+    border-radius:8px;
+    border:none;
+}
+button {
+    background:#667eea;
+    color:white;
+}
+</style>
 </head>
 
 <body>
 
-<h1>🔐 Stego Secure Messenger</h1>
+<h1>🔐 Secure Messenger</h1>
 
 <div class="box">
-    <form action="/encode" method="post" enctype="multipart/form-data">
-
-        <input type="text" name="message" placeholder="Enter secret message" required>
-
-        <input type="password" name="key" placeholder="Enter secret key" required>
-
-        <input type="file" name="image" required>
-
-        <input type="file" name="video" required>
-
-        <button type="submit">Encode & Download</button>
-    </form>
-
-    <br>
-
-    <a href="/decode">Go to Decode</a>
-
+<form action="/encode" method="post">
+<input type="password" name="message" placeholder="Secret message">
+<input type="password" name="key" placeholder="Secret key">
+<button type="submit">Generate Secure Link</button>
+</form>
 </div>
 
 </body>
